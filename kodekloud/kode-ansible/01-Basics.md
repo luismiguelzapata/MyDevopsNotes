@@ -4,7 +4,7 @@ _Esta guía os muestra cómo se debe hacer para instalar helm en nuestro ordenad
 
 ## Release 2.14.3
 
-_Es necesario descargar la [release v2.14.3](https://github.com/helm/helm/releases/tag/v2.14.3)
+Es necesario descargar la [release v2.14.3](https://github.com/helm/helm/releases/tag/v2.14.3)
 
 ### Instalación en linux
 
@@ -28,7 +28,7 @@ $ mv linux-amd64/helm linux-amd64/tiller /usr/local/bin
 
 ```
 
-### Validación
+#### Validación
 
 Después de mover los ficheros, se procede a validar que tanto helm como tiller estén correctamente instalados.
 
@@ -47,7 +47,7 @@ Instalar a través del gestor de paquetes de Windows chocolatey. Para más infor
 > choco install kubernetes-helm --version=2.14.3
 ```
 
-### Validación
+#### Validación
 
 Después de que termine el proceso de instalación, se procede a validar que el helm este correctamente instalados
 
@@ -65,11 +65,10 @@ Instalar a través del gestor de paquetes de MAC homebrew. Para más informació
 brew install helm
 ```
 
-### Validación
+#### Validación
 
 Después de que termine el proceso de instalación, se procede a validar que el helm este correctamente instalados
 
 ```
 helm version
 ```
-
