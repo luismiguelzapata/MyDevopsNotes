@@ -1,105 +1,75 @@
-# Título del Proyecto
+# Instalación de Helm
 
-_Acá va un párrafo que describa lo que es el proyecto_
+_Esta guía os muestra cómo se debe hacer para instalar helm en nuestro ordenador_
 
-## Comenzando 🚀
+## Release 2.14.3
 
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
+_Es necesario descargar la [release v2.14.3](https://github.com/helm/helm/releases/tag/v2.14.3)
 
-Mira **Deployment** para conocer como desplegar el proyecto.
+### Instalación en linux
+
+_El proceso de instalación es el siguiente:_
 
 
-### Pre-requisitos 📋
-
-_Que cosas necesitas para instalar el software y como instalarlas_
+Descargar la release
+```
+$ wget https://get.helm.sh/helm-v2.14.3-linux-amd64.tar.gz
+```
+Una vez descargada la release, desempaquetar el fichero
 
 ```
-Da un ejemplo
+$ tar -zxvf helm-v2.14.3-linux-amd64.tar.gz
 ```
 
-### Instalación 🔧
-
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
-
-_Dí cómo será ese paso_
+luego ingresar en la carpeta descomprimida, y mover los ficheros helm y tiller a la ruta /usr/local/bin
 
 ```
-Da un ejemplo
-```
-
-_Y repite_
+$ mv linux-amd64/helm linux-amd64/tiller /usr/local/bin
 
 ```
-hasta finalizar
-```
 
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
+### Validación
 
-## Ejecutando las pruebas ⚙️
-
-_Explica como ejecutar las pruebas automatizadas para este sistema_
-
-### Analice las pruebas end-to-end 🔩
-
-_Explica que verifican estas pruebas y por qué_
+Después de mover los ficheros, se procede a validar que tanto helm como tiller estén correctamente instalados.
 
 ```
-Da un ejemplo
+$ helm version
+$ tiller version
 ```
 
-### Y las pruebas de estilo de codificación ⌨️
+### Instalación en Windows
 
-_Explica que verifican estas pruebas y por qué_
+_El proceso de instalación es el siguiente:_
+
+Instalar a través del gestor de paquetes de Windows chocolatey. Para más información visite [chocolatey](https://chocolatey.org/) 
 
 ```
-Da un ejemplo
+> choco install kubernetes-helm --version=2.14.3
 ```
 
-## Despliegue 📦
+### Validación
 
-_Agrega notas adicionales sobre como hacer deploy_
+Después de que termine el proceso de instalación, se procede a validar que el helm este correctamente instalados
 
-## Construido con 🛠️
+```
+> helm version
+```
 
-_Menciona las herramientas que utilizaste para crear tu proyecto_
+### Instalación en MAC
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
-* [Maven](https://maven.apache.org/) - Manejador de dependencias
-* [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
+_El proceso de instalación es el siguiente:_
 
-## Contribuyendo 🖇️
+Instalar a través del gestor de paquetes de MAC homebrew. Para más información visite [homebrew](https://brew.sh/index_es) 
 
-Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
+```
+brew install helm
+```
 
-## Wiki 📖
+### Validación
 
-Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
+Después de que termine el proceso de instalación, se procede a validar que el helm este correctamente instalados
 
-## Versionado 📌
+```
+helm version
+```
 
-Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
-
-## Autores ✒️
-
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
-
-* **Andrés Villanueva** - *Trabajo Inicial* - [villanuevand](https://github.com/villanuevand)
-* **Fulanito Detal** - *Documentación* - [fulanitodetal](#fulanito-de-tal)
-
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
-
-## Licencia 📄
-
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
-
-## Expresiones de Gratitud 🎁
-
-* Comenta a otros sobre este proyecto 📢
-* Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
-* Da las gracias públicamente 🤓.
-* etc.
-
-
-
----
-⌨️ con ❤️ por [Villanuevand](https://github.com/Villanuevand) 😊 
